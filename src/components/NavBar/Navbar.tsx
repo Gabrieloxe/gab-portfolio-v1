@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { userData } from '@/data/constants';
 
 export const Navbar = () => {
-  const router = useRouter();
+  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -33,13 +33,13 @@ export const Navbar = () => {
           <Link
             href='/about'
             className={`text-base  ${
-              router.asPath === '/about'
+              pathname === '/about'
                 ? 'text-gray-800 font-bold dark:text-gray-400'
                 : 'text-gray-600 dark:text-gray-300 font-normal '
             }`}
           >
             About{' '}
-            {router.asPath === '/about' && (
+            {pathname === '/about' && (
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
@@ -58,13 +58,13 @@ export const Navbar = () => {
           <Link
             href='/projects'
             className={`text-base  ${
-              router.asPath === '/projects'
+              pathname === '/projects'
                 ? 'text-gray-800 font-bold dark:text-gray-400'
                 : 'text-gray-600 dark:text-gray-300 font-normal '
             }`}
           >
             Projects
-            {router.asPath === '/projects' && (
+            {pathname === '/projects' && (
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
@@ -83,13 +83,13 @@ export const Navbar = () => {
           <Link
             href='/experience'
             className={`text-base  ${
-              router.asPath === '/experience'
+              pathname === '/experience'
                 ? 'text-gray-800 font-bold dark:text-gray-400'
                 : 'text-gray-600 dark:text-gray-300 font-normal '
             }`}
           >
             Experience{' '}
-            {router.asPath === '/experience' && (
+            {pathname === '/experience' && (
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
@@ -108,13 +108,13 @@ export const Navbar = () => {
           <Link
             href='/contact'
             className={`text-base  ${
-              router.asPath === '/contact'
+              pathname === '/contact'
                 ? 'text-gray-800 font-bold dark:text-gray-400'
                 : 'text-gray-600 dark:text-gray-300 font-normal '
             }`}
           >
             Contact
-            {router.asPath === '/contact' && (
+            {pathname === '/contact' && (
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
