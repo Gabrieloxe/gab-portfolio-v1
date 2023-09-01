@@ -1,8 +1,20 @@
+import { Navbar } from '@/components/NavBar/Navbar';
+import { ResumeItem } from '@/components/ResumeItem/ResumeItem';
+import { Card } from '@/components/UI/Card/Card';
+
 const Home = () => {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      Gabriel Ong
-    </main>
+    <div>
+      <Navbar />
+      <Card>
+        <ResumeItem
+          jobTitle='Support Solutions Engineer'
+          description='some description'
+          tenure='2020 August - Present'
+          companyName='Smartly.io'
+        />
+      </Card>
+    </div>
   );
 };
 
