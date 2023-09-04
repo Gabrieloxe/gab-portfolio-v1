@@ -1,5 +1,12 @@
 export const projects = []
-export const experience = []
+export const experience = [
+    {
+        title: "Support Solutions Engineer",
+        company: "Smartly.io",
+        location: "Singapore",
+        description: "some beautiful description",
+    },
+]
 export const socialLinks = {
     instagram: "https://instagram.com/gabrieloxe",
     linkedin: "https://linkedin.com/in/gabrieloxe",
