@@ -1,10 +1,12 @@
 export const projects = []
 export const experience = [
     {
-        title: "Support Solutions Engineer",
-        company: "Smartly.io",
-        location: "Singapore",
+        id: "1",
+        jobTitle: "Support Solutions Engineer",
+        companyName: "Smartly.io",
+        tenure: "",
         description: "some beautiful description",
+        imageURL: 'https://yt3.googleusercontent.com/py_b0-eqNosgAk3U2WsHNf_O2ijI1-qaxV3TfLlE_ux98S4iyuKR3hZZm1Cj-BnGCXs3WZ-Axqk=s900-c-k-c0x00ffffff-no-rj'
     },
 ]
 export const socialLinks = {

@@ -1,21 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
 
 type ResumeItemProps = {
+  key: string;
   companyName: string;
   jobTitle: string;
   tenure: string;
   description: string;
+  imageURL: string;
 };
 
 export const ResumeItem = (props: ResumeItemProps) => {
   return (
     <div className='flex font-sans'>
-      <div className='flex-none w-48 relative'>
-        <img
-          src='https://yt3.googleusercontent.com/py_b0-eqNosgAk3U2WsHNf_O2ijI1-qaxV3TfLlE_ux98S4iyuKR3hZZm1Cj-BnGCXs3WZ-Axqk=s900-c-k-c0x00ffffff-no-rj'
+      <div className='flex-none w-48'>
+        <Image
+          src={props.imageURL}
           alt=''
-          className='absolute inset-0 w-full h-full object-cover'
+          className='inset-0 w-full h-full object-cover relative'
           loading='lazy'
+          width={100}
+          height={100}
         />
       </div>
       <form className='flex-auto p-6'>
