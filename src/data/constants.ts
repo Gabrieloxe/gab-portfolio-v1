@@ -11,7 +11,7 @@ export const experience = [
 ]
 export const socialLinks = {
     instagram: "https://instagram.com/gabrieloxe",
-    linkedin: "https://linkedin.com/in/gabrieloxe",
+    linkedin: "https://linkedin.com/in/gabriel-ong-bb3494159/",
 }
 export const userData = {
     githubUsername: "gabrieloxe",
