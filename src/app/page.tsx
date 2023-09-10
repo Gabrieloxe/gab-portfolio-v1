@@ -1,19 +1,9 @@
-import { Navbar } from '@/components/NavBar/Navbar';
-import { ResumeItem } from '@/components/ResumeItem/ResumeItem';
-import { Card } from '@/components/UI/Card/Card';
+import AboutSection from '../components/AboutSection/AboutSection';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <Card>
-        <ResumeItem
-          jobTitle='Support Solutions Engineer'
-          description='some description'
-          tenure='2020 August - Present'
-          companyName='Smartly.io'
-        />
-      </Card>
+      <AboutSection />
     </div>
   );
 };

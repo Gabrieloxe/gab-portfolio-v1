@@ -6,6 +6,6 @@ type CardProps = {
 };
 
 export const Card = (props: CardProps) => {
-  return <div className={classes.card}>{props.children}</div>;
+  return <div>{props.children}</div>;
 };
 
