@@ -1,12 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { useTheme } from 'next-themes';
 
-const ThemeButton = () => {
+export const ThemeButton = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <div>
@@ -25,5 +29,3 @@ const ThemeButton = () => {
     </div>
   );
 };
-
-export default ThemeButton;
