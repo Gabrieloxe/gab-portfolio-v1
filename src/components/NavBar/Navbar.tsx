@@ -95,31 +95,32 @@ export const Navbar = () => {
 
   return (
     <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-gray-50 dark:bg-stone-900'>
-      <div className='justify-between md:items-center md:flex'>
-        <div>
-          <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
-            <NavbarTitle />
-            <HamburgerMenu />
-          </div>
+      <div className='justify-between md:items-center md:flex w-full flex-row '>
+        <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
+          <NavbarTitle />
+          <HamburgerMenu />
         </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? 'block' : 'hidden'
-            }`}
-          >
-            <div className='flex  flex-row'>
-              <div className='flex flex-row items-center space-x-5'>
-                {NAV_ITEMS.map((item) => {
-                  return <a key={item.label}>{item.label}</a>;
-                })}
-              </div>
-              <div className='flex flex-row items-center space-x-4'>
-                <SocialMediaButtons />
-                <ThemeButton />
-              </div>
+
+        <div
+          className={`justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            navbar ? 'block' : 'hidden'
+          }`}
+        >
+          <div className='flex  flex-col gap-5'>
+            <div className='flex flex-row items-center space-x-10'>
+              {NAV_ITEMS.map((item) => {
+                return <a key={item.label}>{item.label}</a>;
+              })}
+            </div>
+            <div className='flex-row space-x-4 items-center md:hidden flex'>
+              <SocialMediaButtons />
+              <ThemeButton />
             </div>
           </div>
+        </div>
+        <div className='flex-row space-x-4 items-center hidden md:flex'>
+          <SocialMediaButtons />
+          <ThemeButton />
         </div>
       </div>
     </header>
