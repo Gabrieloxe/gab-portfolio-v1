@@ -21,7 +21,7 @@ export const ThemeButton = () => {
         className='bg-slate-100 p-2 rounded-xl transition-colors duration-200 ease-in-out hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700'
       >
         {currentTheme === 'dark' ? (
-          <RiSunLine size={25} color='black' />
+          <RiSunLine size={25} color='white' />
         ) : (
           <RiMoonFill size={25} />
         )}
