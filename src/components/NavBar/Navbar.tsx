@@ -33,6 +33,10 @@ type NavbarComponentProps = {
   children?: React.ReactNode;
 };
 
+type NavbarWrapperProps = {
+  children?: React.ReactNode;
+};
+
 const NavbarTitle = () => {
   return (
     <div className='md:py-5 md:block px-6'>
@@ -85,22 +89,30 @@ const HiddenBlock = (props: NavbarComponentProps) => {
   );
 };
 
+const NavbarContentWrapper = (props: NavbarWrapperProps) => {
+  return (
+    <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-gray-50 dark:bg-stone-900'>
+      <div className='justify-between md:items-center md:flex w-full flex-row '>
+        {props.children}
+      </div>
+    </header>
+  );
+};
+
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-gray-50 dark:bg-stone-900'>
-      <div className='justify-between md:items-center md:flex w-full flex-row '>
-        <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
-          <NavbarTitle />
-          <HamburgerMenu navbar={navbar} setNavbar={setNavbar} />
-        </div>
-        <HiddenBlock navbar={navbar} />
-        <div className='flex-row space-x-4 items-center hidden md:flex'>
-          <SocialMediaButtons />
-          <ThemeButton />
-        </div>
+    <NavbarContentWrapper>
+      <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
+        <NavbarTitle />
+        <HamburgerMenu navbar={navbar} setNavbar={setNavbar} />
       </div>
-    </header>
+      <HiddenBlock navbar={navbar} />
+      <div className='flex-row space-x-4 items-center hidden md:flex'>
+        <SocialMediaButtons />
+        <ThemeButton />
+      </div>
+    </NavbarContentWrapper>
   );
 };
