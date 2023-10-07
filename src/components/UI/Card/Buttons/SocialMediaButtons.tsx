@@ -1,7 +1,7 @@
 import React from 'react';
 import { userData } from '@/data/constants';
 
-export const InstagramButton = () => {
+const InstagramButton = () => {
   return (
     <a href={userData.socialLinks.instagram}>
       <svg
@@ -18,7 +18,7 @@ export const InstagramButton = () => {
   );
 };
 
-export const LinkedInButton = () => {
+const LinkedInButton = () => {
   return (
     <a
       href={userData.socialLinks.linkedin}
