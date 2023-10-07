@@ -19,11 +19,11 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'About',
-    page: '/about',
+    page: '#about',
   },
   {
     label: 'Projects',
-    page: '/projects',
+    page: '#projects',
   },
 ];
 
@@ -77,7 +77,11 @@ const HiddenBlock = (props: NavbarComponentProps) => {
       <div className='flex  flex-col gap-5'>
         <div className='flex flex-row items-center space-x-10'>
           {NAV_ITEMS.map((item) => {
-            return <a key={item.label}>{item.label}</a>;
+            return (
+              <a key={item.label} href={item.page}>
+                {item.label}
+              </a>
+            );
           })}
         </div>
         <div className='flex-row space-x-4 items-center md:hidden flex'>
@@ -91,8 +95,8 @@ const HiddenBlock = (props: NavbarComponentProps) => {
 
 const NavbarContentWrapper = (props: NavbarWrapperProps) => {
   return (
-    <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-white dark:bg-stone-900'>
-      <div className='justify-between md:items-center md:flex w-full flex-row '>
+    <header className='w-full mx-auto px-2 sm:px-20 fixed top-0 z-30 bg-white dark:bg-stone-900 dark:border-stone-600"'>
+      <div className='justify-between md:items-center md:flex w-full flex-row'>
         {props.children}
       </div>
     </header>
