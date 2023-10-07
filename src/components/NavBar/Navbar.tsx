@@ -91,7 +91,7 @@ const HiddenBlock = (props: NavbarComponentProps) => {
 
 const NavbarContentWrapper = (props: NavbarWrapperProps) => {
   return (
-    <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-gray-50 dark:bg-stone-900'>
+    <header className='max-w-6xl  mx-auto px-4 sm:px-20 py-10 md:py-2 bg-white dark:bg-stone-900'>
       <div className='justify-between md:items-center md:flex w-full flex-row '>
         {props.children}
       </div>
