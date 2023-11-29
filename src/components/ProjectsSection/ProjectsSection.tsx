@@ -9,10 +9,11 @@ const projects = [
   {
     name: 'Korean Lyrics Extractor',
     description:
-      'I wanted to get the lyrics to korean songs I liked so i build a scraper during the pandemic',
-    image: '/Placeholder_1920_1280.png',
+      'I wanted to get the lyrics to korean songs I liked so i build a scraper during the pandemic from the Melon website',
+    image: '/Melon.png',
     link: 'https://www.google.com',
-    github: 'https://www.github.com',
+    github:
+      'https://github.com/Gabrieloxe/CircuitBreakerGab/blob/master/koreanLyricsExtractor/koreanLyrics_melon.py',
   },
   {
     name: 'Project 2',
