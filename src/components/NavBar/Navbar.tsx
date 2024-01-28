@@ -80,7 +80,7 @@ const HiddenBlock = (props: NavbarComponentProps) => {
     >
       <div className='flex  flex-col gap-5'>
         <div className='flex flex-row items-center space-x-10'>
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.map(item => {
             return (
               <a key={item.label} href={item.page}>
                 {item.label}
@@ -107,20 +107,36 @@ const NavbarContentWrapper = (props: NavbarWrapperProps) => {
   );
 };
 
+const RightButtonsWrapper = (props: NavbarWrapperProps) => {
+  return (
+    <div className='flex-row space-x-4 items-center hidden md:flex'>
+      {props.children}
+    </div>
+  );
+};
+
+const NavbarWrapper = (props: NavbarWrapperProps) => {
+  return (
+    <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
+      {props.children}
+    </div>
+  );
+};
+
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
     <NavbarContentWrapper>
-      <div className='flex flex-row items-center justify-between py-3 md:py-5 md:block'>
+      <NavbarWrapper>
         <NavbarTitle />
         <HamburgerMenu navbar={navbar} setNavbar={setNavbar} />
-      </div>
+      </NavbarWrapper>
       <HiddenBlock navbar={navbar} />
-      <div className='flex-row space-x-4 items-center hidden md:flex'>
+      <RightButtonsWrapper>
         <SocialMediaButtons />
         <ThemeButton />
-      </div>
+      </RightButtonsWrapper>
     </NavbarContentWrapper>
   );
 };

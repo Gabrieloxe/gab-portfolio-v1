@@ -7,6 +7,13 @@ import { type } from 'os';
 
 const projects = [
   {
+    name: 'Will you date me',
+    description: 'Public release version of the site I made for my girlfriend. This project is a pure frontend site built with react and styled components',
+    image: '/Date_me.png',
+    link: 'https://willyoudateme.vercel.app/',
+    github: 'https://github.com/Gabrieloxe/date-me',
+  },
+  {
     name: 'Korean Lyrics Extractor',
     description:
       'I wanted to get the lyrics to korean songs I liked so i build a scraper during the pandemic from the Melon website',
@@ -14,13 +21,6 @@ const projects = [
     link: 'https://www.google.com',
     github:
       'https://github.com/Gabrieloxe/CircuitBreakerGab/blob/master/koreanLyricsExtractor/koreanLyrics_melon.py',
-  },
-  {
-    name: 'Project 2',
-    description: 'This is a project',
-    image: '/Placeholder_1920_1280.png',
-    link: 'https://www.google.com',
-    github: 'https://www.github.com',
   },
 ];
 
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
     <section id='projects'>
       <Title title='Projects' />
       <div className='flex flex-col space-y-28'>
-        {projects.map((project) => {
+        {projects.map(project => {
           return <ProjectCard project={project} key={project.name} />;
         })}
       </div>
