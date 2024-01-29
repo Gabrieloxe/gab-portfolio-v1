@@ -37,12 +37,16 @@ export const userData = {
     skills: [
         { id: 1, skill: 'TypeScript' },
         { id: 2, skill: 'JavaScript' },
-        { id: 3, skill: 'React' },
-        { id: 4, skill: 'Python' },
-        { id: 5, skill: 'SQL' },
-        { id: 6, skill: 'GitHub' },
-        { id: 7, skill: 'Tailwind CSS' },
-        { id: 8, skill: 'Snowflake' },
-        { id: 9, skill: 'Tableau' },
+        { id: 3, skill: 'Python' },
+        { id: 4, skill: 'Ruby on Rails' },
+        { id: 5, skill: 'React' },
+        { id: 6, skill: 'SQL' },
+        { id: 7, skill: 'GitHub' },
+        { id: 8, skill: 'Tailwind CSS' },
+        { id: 9, skill: 'Snowflake' },
+        { id: 10, skill: 'Tableau' },
+        { id: 11, skill: 'Css' },
+        { id: 12, skill: 'Tailwind' },
+        { id: 13, skill: 'Next JS' },
     ]
 };
